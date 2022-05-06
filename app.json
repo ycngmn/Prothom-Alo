@@ -1,7 +1,7 @@
 {
-  "name": "Shrinkit Bot",
-  "description": "Short URLs with most advanced features...",
-  "repository": "https://github.com/ycngmn/Shrinkit-Bot",
+  "name": "Prothom Alo",
+  "description": "Scrap and post news...",
+  "repository": "https://github.com/ycngmn/Prothom-Alo",
   "env": {
       "TOKEN": {
           "description": "Your Bot token from @Botfather"
@@ -14,8 +14,8 @@
       }
   },
   "buildpacks": [
-      {
-          "url": "heroku/python"
-      }
+    {"url": "heroku/python"},
+    {"url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"},
+    {"url":"https://github.com/heroku/heroku-buildpack-google-chrome.git"}
   ]
 }
