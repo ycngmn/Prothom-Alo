@@ -43,7 +43,9 @@ while True:
             try: 
                 with bot: bot.send_photo(f'prothomaloX',imagei,post)
                 print('Posted',source)
-            except Exception as e: print(e)
+            except Exception as e: 
+              print(e)
+              continue
             cu.execute(f"INSERT INTO pa (news) VALUES ('{source}')")
             co.commit()
         else:
