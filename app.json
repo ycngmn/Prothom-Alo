@@ -1,0 +1,21 @@
+{
+  "name": "Shrinkit Bot",
+  "description": "Short URLs with most advanced features...",
+  "repository": "https://github.com/ycngmn/Shrinkit-Bot",
+  "env": {
+      "TOKEN": {
+          "description": "Your Bot token from @Botfather"
+      },
+      "ID": {
+          "description": "Your API_ID from https://my.telegram.org/"
+      },
+      "HASH": {
+          "description": "Your API_HASH from https://my.telegram.org/"
+      }
+  },
+  "buildpacks": [
+      {
+          "url": "heroku/python"
+      }
+  ]
+}
