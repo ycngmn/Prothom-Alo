@@ -16,7 +16,7 @@ cu.execute("CREATE TABLE IF NOT EXISTS pa (news TEXT,images TEXT,videos TEXT)")
 co.commit()
 
 while True:
-    session = HTMLSession()
+    session = HTMLSession(browser_args=["--no-sandbox"])
     r = session.get("https://www.prothomalo.com/collection/latest")
     r.html.render(timeout=30)
     soup = BeautifulSoup(r.html.html,"lxml")
@@ -28,7 +28,7 @@ while True:
         v = cu.fetchall()
         if len(v)==0:
             try:
-                session = HTMLSession()
+                session = HTMLSession(browser_args=["--no-sandbox"])
                 rr = session.get(source)
                 rr.html.render(timeout=30)
             except: continue
